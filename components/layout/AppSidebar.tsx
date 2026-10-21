@@ -41,14 +41,13 @@ export default function AppSidebar({ sections, subtitle, homeHref, isOpen, onClo
       {isOpen && <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden" onClick={onClose} />}
 
       <aside
-        className={`fixed top-0 left-0 h-full w-64 z-50 flex flex-col border-r border-white/5 bg-gradient-to-b from-[#0b1220] via-[#0a0d14] to-[#080808] transform transition-transform duration-300 lg:translate-x-0 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 h-full w-64 z-50 flex flex-col border-r border-white/5 bg-gradient-to-b from-[#0b1220] via-[#0a0d14] to-[#080808] transform transition-transform duration-300 lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
-        <div className="px-5 pt-6 pb-5">
+        <div className="px-5 pb-5">
           <Link href={homeHref} onClick={onClose} className="flex flex-col items-start gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-wordmark.png" alt={SITE_NAME} className="h-7 w-auto object-contain" />
+            <img src="/thrive-logo.png" alt={SITE_NAME} className="h-20 w-auto object-contain" />
             <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-[0.7rem] font-medium uppercase tracking-wider text-primary">
               <span className="size-1.5 rounded-full bg-primary" />
               {subtitle}
@@ -73,19 +72,17 @@ export default function AppSidebar({ sections, subtitle, homeHref, isOpen, onClo
                         href={item.href}
                         onClick={onClose}
                         aria-current={active ? 'page' : undefined}
-                        className={`group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all ${
-                          active
+                        className={`group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all ${active
                             ? 'bg-primary/15 text-white shadow-[inset_0_0_0_1px_rgba(59,140,255,0.25)]'
                             : 'text-white/55 hover:bg-white/5 hover:text-white'
-                        }`}
+                          }`}
                       >
                         {active && (
                           <span className="absolute left-0 top-1/2 h-6 w-[3px] -translate-y-1/2 rounded-full bg-primary shadow-[0_0_12px_rgba(59,140,255,0.8)]" />
                         )}
                         <span
-                          className={`material-symbols-outlined text-[20px] transition-colors ${
-                            active ? 'text-primary' : 'text-white/40 group-hover:text-white/80'
-                          }`}
+                          className={`material-symbols-outlined text-[20px] transition-colors ${active ? 'text-primary' : 'text-white/40 group-hover:text-white/80'
+                            }`}
                         >
                           {item.icon}
                         </span>
@@ -116,9 +113,8 @@ export function UserAvatar({ name, size = 'md' }: { name?: string | null; size?:
       .join('') || '?';
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-bright to-[#1d4ed8] font-semibold text-white ${
-        size === 'lg' ? 'size-12 text-base' : 'size-9 text-sm'
-      }`}
+      className={`inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-bright to-[#1d4ed8] font-semibold text-white ${size === 'lg' ? 'size-12 text-base' : 'size-9 text-sm'
+        }`}
     >
       {initials}
     </span>

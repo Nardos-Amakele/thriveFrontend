@@ -47,7 +47,7 @@ export default function LoginForm({ eyebrow, subtitle }: LoginFormProps) {
         <div className="relative w-full max-w-md">
           <Link href="/" className="mb-6 flex justify-center" aria-label={`${SITE_NAME} home`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-wordmark.png" alt={SITE_NAME} width={111} height={40} className="h-10 w-auto object-contain" />
+            <img src="/thrive-logo.png" alt={SITE_NAME} width={111} height={60} className="h-20 w-auto object-contain" />
           </Link>
 
           <div className="rounded-[1.25rem] bg-white p-7 md:p-10">

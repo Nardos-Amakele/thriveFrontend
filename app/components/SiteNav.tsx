@@ -43,7 +43,7 @@ export function SiteNav() {
         >
           {/* The nav uses the "Thrive" wordmark; the full logo is in the footer and icons. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-wordmark.png" alt={SITE_NAME} width={67} height={24} className="h-6 w-auto object-contain" />
+          <img src="/thrive-logo.png" alt={SITE_NAME} width={67} height={24} className="h-6 w-auto object-contain" />
         </Link>
 
         <div className="hidden items-center gap-0.5 lg:flex">
@@ -51,9 +51,8 @@ export function SiteNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`mono rounded-[0.6rem] px-3.5 py-2 !text-[0.76rem] transition-colors ${
-                isActive(item.href) ? "bg-white/15 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
-              }`}
+              className={`mono rounded-[0.6rem] px-3.5 py-2 !text-[0.76rem] transition-colors ${isActive(item.href) ? "bg-white/15 text-white" : "text-white/80 hover:bg-white/10 hover:text-white"
+                }`}
             >
               {item.label}
             </Link>
@@ -91,18 +90,16 @@ export function SiteNav() {
 
       {/* Mobile and tablet menu */}
       <div
-        className={`nav-bar mx-auto mt-2 w-full max-w-[64rem] origin-top p-2 text-white transition-all duration-200 lg:hidden ${
-          open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
-        }`}
+        className={`nav-bar mx-auto mt-2 w-full max-w-[64rem] origin-top p-2 text-white transition-all duration-200 lg:hidden ${open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
+          }`}
       >
         {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
             onClick={() => setOpen(false)}
-            className={`mono flex items-center justify-between rounded-[0.75rem] px-4 py-4 !text-[0.82rem] ${
-              isActive(item.href) ? "bg-white/15 text-white" : "text-white/90"
-            }`}
+            className={`mono flex items-center justify-between rounded-[0.75rem] px-4 py-4 !text-[0.82rem] ${isActive(item.href) ? "bg-white/15 text-white" : "text-white/90"
+              }`}
           >
             {item.label}
             <span className="text-white/40">→</span>
