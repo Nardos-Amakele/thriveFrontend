@@ -8,7 +8,8 @@ export function describeQty(base: number, u: InventoryUnits): string {
     const packs = Math.floor(base / upp);
     const units = base % upp;
     const p = `${packs} ${plural(packs, u.packName)}`;
-    return units === 0 ? p : `${p} + ${units} ${plural(units, u.unitName)}`;
+    // The total in single units, so nobody has to multiply.
+    return `${units === 0 ? p : `${p} + ${units} ${plural(units, u.unitName)}`} (${base} ${plural(base, u.unitName)})`;
   }
   return `${base} ${plural(base, u.unitName)}`;
 }
